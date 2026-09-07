@@ -1,4 +1,4 @@
-# TaskVault 🔐
+# TaskVault
 
 A small, self-contained **Task Management API with an admin dashboard**, built to demonstrate secure backend design: session-based auth for the dashboard, scoped API keys for outside consumers, rate limiting, and input validation — all on a real SQLite database.
 
@@ -15,17 +15,17 @@ TaskVault implements both, side by side, so you can see the difference in one co
 
 ## Features
 
-- ✅ CRUD task management with status (`pending` / `in_progress` / `done`) and priority
-- ✅ Admin dashboard (plain HTML/CSS/JS, no build step) with login, task table, and API key management
-- ✅ JWT-based session auth for the dashboard (`/api/*`)
-- ✅ API-key-based auth for external consumers (`/api/v1/*`), with **read** and **write** scopes
-- ✅ API keys are hashed with bcrypt before storage — the raw key is shown exactly once, at creation
-- ✅ Rate limiting (tighter on the public API and on login attempts, to blunt brute-force/abuse)
-- ✅ Input validation on every write endpoint (`express-validator`)
-- ✅ Security headers via `helmet`
-- ✅ SQLite via `better-sqlite3` — a real embedded database, zero setup required
-- ✅ Automated tests (`jest` + `supertest`) covering auth, tasks, and the public API's scopes
-- ✅ GitHub Actions CI running the test suite on every push/PR
+-  CRUD task management with status (`pending` / `in_progress` / `done`) and priority
+-  Admin dashboard (plain HTML/CSS/JS, no build step) with login, task table, and API key management
+-  JWT-based session auth for the dashboard (`/api/*`)
+-  API-key-based auth for external consumers (`/api/v1/*`), with **read** and **write** scopes
+-  API keys are hashed with bcrypt before storage — the raw key is shown exactly once, at creation
+-  Rate limiting (tighter on the public API and on login attempts, to blunt brute-force/abuse)
+-  Input validation on every write endpoint (`express-validator`)
+-  Security headers via `helmet`
+-  SQLite via `better-sqlite3` — a real embedded database, zero setup required
+-  Automated tests (`jest` + `supertest`) covering auth, tasks, and the public API's scopes
+-  GitHub Actions CI running the test suite on every push/PR
 
 ## Architecture
 
